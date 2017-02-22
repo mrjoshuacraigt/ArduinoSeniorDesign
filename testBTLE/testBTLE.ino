@@ -70,7 +70,7 @@ void setup() {
 
   
 
-  Serial.println("Conntected");
+  
 
 }
 
@@ -129,6 +129,10 @@ void splitString(String readingString) {
     } else if (count == 4) {
       if (isValidReading(pch)){
         sendSenorService(nodeId, "2", pch_string);
+      }
+    } else if (count == 5) {
+      if (isValidReading(pch)){
+        sendSenorService(nodeId, "3", pch_string);
       }
     }
     count++;
